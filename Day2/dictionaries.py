@@ -75,7 +75,7 @@ while True:
         "Horse" : "Foal"
     }
 
-    animal_name = input("Enter an animal name: ").capitalize()
+    animal_name = input("Enter an animal name: ").title()
 
     if animal_name in animals:
         print(f"The baby of an {animal_name} is a " + animals.get(animal_name))
@@ -85,6 +85,6 @@ while True:
         print(f"The baby of an {animal_name} is a " + animals.get(animal_name))
     end=input("would you like to submit another animal? (y or n): ")
 
-    if end != "y":
+    if end.lower() != "y":
         print("goodbye")
         break
