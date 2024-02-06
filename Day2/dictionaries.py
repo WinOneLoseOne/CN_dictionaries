@@ -47,6 +47,8 @@
 
 # print (countries_languages)
 
+#challenge 3
+
 #using your dictionary of animals, create a program which allows a user to search for an animal to see the corresponding young name
 #if the animal does not exist in the dictionary, return a suitable message
 
@@ -60,22 +62,29 @@
 
 # print(animals.get(animal_input, "This animal is not in the list")) #if the animal is in the list print the name of the baby, else, print the message
 
+#challenge 4
 #using your dictionary of animals, create a program which allows a user to submit an animal name and baby name 
 #if the animal already exists, return the exisiting baby name
 #if the animal doesn't exist, add it to the dictionary
 
-animals = {
-    "Lion" : "Cub",
-    "Cat" : "Kitten",
-    "Dog" : "Puppy",
-    "Horse" : "Foal"
-}
+while True:
+    animals = {
+        "Lion" : "Cub",
+        "Cat" : "Kitten",
+        "Dog" : "Puppy",
+        "Horse" : "Foal"
+    }
 
-animal_name = input("Enter an animal name: ").capitalize()
+    animal_name = input("Enter an animal name: ").capitalize()
 
-if animal_name in animals:
-    print(f"The baby of an {animal_name} is a " + animals.get(animal_name))
-else:
-    baby_name = input("This animal is not in the list. Enter the baby name: ")
-    animals.setdefault(animal_name, baby_name)
-    print(f"The baby of an {animal_name} is a " + animals.get(animal_name))
+    if animal_name in animals:
+        print(f"The baby of an {animal_name} is a " + animals.get(animal_name))
+    else:
+        baby_name = input("This animal is not in the list. Enter the baby name: ")
+        animals.setdefault(animal_name, baby_name)
+        print(f"The baby of an {animal_name} is a " + animals.get(animal_name))
+    end=input("would you like to submit another animal? (y or n): ")
+
+    if end != "y":
+        print("goodbye")
+        break
