@@ -55,9 +55,9 @@
 # If the name appears on the barred list, the guest must
 # get turned away.
     
-guest_list = ["sophia", "olivia", "emma", "jackson", "isabella", "lucas"]
+guest_list = ["sophia", "olivia", "emma", "jackson", "isabella", "lucas", "josh"]
 
-banned_list = ["ava", "aiden"]
+banned_list = ["ava", "aiden", "matan"]
 
 while True:
     enter_name = input("Type your name here: ").lower()
@@ -69,4 +69,7 @@ while True:
         end = input("You have to wait, would you like to enter another name? (y/n)" )
         if end != "y":
             break
+
+
+
 
